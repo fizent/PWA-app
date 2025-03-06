@@ -11,18 +11,18 @@ export default defineConfig({
         enabled: true
       },
       manifest: {
-        name: "My PWA App",
+        name: "Fazel Calculator",
         short_name: "PWA App",
         description: "A React PWA built with Vite",
         theme_color: "#ffffff",
         icons: [
           {
-            src: "/pwa-192x192.png",
+            src: "/calculator192.png",
             sizes: "192x192",
             type: "image/png"
           },
           {
-            src: "/pwa-512x512.png",
+            src: "/calculator512.png",
             sizes: "512x512",
             type: "image/png"
           }

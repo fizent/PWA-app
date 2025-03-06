@@ -1,42 +1,149 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --blue-dark: #02023f;   /* آبی پرنگ */
+  --black: #000000;       /* مشکی */
+  --midnight-blue: #191970; /* آبی شب */
+  --dark-blue: #001f3d;   /* آبی تیره */
+  --indigo: #4B0082;      /* نیل */
+  --dark-violet: #9400d3;  /* بنفش تیره */
+  --dark-purple: #800080;   /* بنفش تیره */
+  --dark-slate-blue: #483d8b; /* آبی سنگی تیره */
+  --steel-blue: #4682b4;    /* آبی فولادی */
+  --charcoal: #36454f;      /* زغالی */
+  --gunmetal: #2a3439;      /* فلزی تیر‌ه */
+  --slate-gray: #708090;    /* خاکی آبی */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  background: linear-gradient(45deg, 
+    var(--black), var(--dark-blue), var(--midnight-blue), var(--dark-slate-blue), 
+    var(--steel-blue), var(--charcoal), var(--gunmetal), var(--dark-violet),
+    var(--dark-purple), var(--blue-dark), var(--indigo));
+  background-size: 1000% 1000%;  /* افزایش حجم تغییر موقعیت */
+  animation: backgroundAnimation 100s ease-in-out infinite; /* مدت زمان انیمیشن زیاد */
+  direction: rtl;
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 100vh;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* انیمیشن پس‌زمینه */
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 0%;
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    background-position: 25% 25%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  75% {
+    background-position: 75% 75%;
+  }
+  100% {
+    background-position: 0% 0%;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.calculator-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.button {
+  margin: 10px;
+  background-color: #444;
+  color: white;
+  font-size: 24px;
+  border: none;
+  padding: 20px 5px 10px 5px;  /* سایز بزرگتر برای دکمه‌ها */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex: 1 0 22%;  /* باعث می‌شود که دکمه‌ها به صورت شناور در یک خط قرار گیرند */
+  min-width: 60px;  /* حداقل عرض دکمه‌ها */
+  border: 2px solid #4d4dc2;
+}
+
+.display {
+  color: white;
+  font-size: 30px;
+}
+
+/* افکت‌های هاور و فعال */
+.button:hover {
+  background-color: #555;
+}
+
+.button:active {
+  background-color: #666;
+}
+
+/* استایل‌های دکمه‌های عملگر */
+.operator {
+  background-color: #00aaff;
+}
+
+.operator:hover {
+  background-color: #0099cc;
+}
+
+
+.equals {
+  background-color: #ff8c00;
+  grid-column: span 2;  
+}
+
+.equals:hover {
+  background-color: #e07b00;
+}
+
+/* دکمه AC */
+.clear {
+  background-color: #ff4444;
+  grid-column: span 4;  
+}
+
+.clear:hover {
+  background-color: #e03333;
+}
+
+
+
+
+@media (max-width: 726px) {
+  .calculator-buttons {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
   }
-}
+  .clear {
+    grid-column: span 1;
+  }
+  .equals {
+    grid-column: span 1;
+    grid-row: span 2;
+    grid-column-end:5;
+  }
+  
+  .exponentiation {
+    grid-column: span 1;
+    grid-row: span 5;
+    grid-column-start: 3;
+  }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

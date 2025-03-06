@@ -1,20 +1,20 @@
 {
   "id": "/",
-  "name": "My PWA App",
-  "short_name": "PWA",
+  "name": "Fazel App",
+  "short_name": "Fazel Calculator",
   "description": "A Progressive Web App built with React and Vite",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "background_color": "#001f3d",
+  "theme_color": "#191970",
   "icons": [
     {
-      "src": "/192New.png",
+      "src": "/calculator192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/512New.png",
+      "src": "/calculator512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
@@ -27,7 +27,7 @@
       "form_factor": "wide"
     },
     {
-      "src": "/Screenshot_3020.png",
+      "src": "/Screenshot Calculator.png",
       "sizes": "750x1334",
       "type": "image/png"
     }
