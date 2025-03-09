@@ -14,12 +14,8 @@
 }
 
 body {
-  background: linear-gradient(45deg, 
-    var(--black), var(--dark-blue), var(--midnight-blue), var(--dark-slate-blue), 
-    var(--steel-blue), var(--charcoal), var(--gunmetal), var(--dark-violet),
-    var(--dark-purple), var(--blue-dark), var(--indigo));
-  background-size: 1000% 1000%;  /* افزایش حجم تغییر موقعیت */
-  animation: backgroundAnimation 100s ease-in-out infinite; /* مدت زمان انیمیشن زیاد */
+
+  background-color: var(--blue-dark);
   direction: rtl;
   box-sizing: border-box;
   margin: 0;
@@ -29,24 +25,7 @@ body {
   height: 100vh;
 }
 
-/* انیمیشن پس‌زمینه */
-@keyframes backgroundAnimation {
-  0% {
-    background-position: 0% 0%;
-  }
-  25% {
-    background-position: 25% 25%;
-  }
-  50% {
-    background-position: 50% 50%;
-  }
-  75% {
-    background-position: 75% 75%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
+
 
 
 * {
@@ -64,7 +43,7 @@ body {
 
 .button {
   margin: 10px;
-  background-color: #444;
+  background-color: var(--midnight-blue);;
   color: white;
   font-size: 24px;
   border: none;
@@ -74,21 +53,29 @@ body {
   transition: background-color 0.3s ease;
   flex: 1 0 22%;  /* باعث می‌شود که دکمه‌ها به صورت شناور در یک خط قرار گیرند */
   min-width: 60px;  /* حداقل عرض دکمه‌ها */
-  border: 2px solid #4d4dc2;
+  border-radius: 30px;
 }
 
 .display {
   color: white;
-  font-size: 30px;
+  font-size: 40px;
+  padding-bottom: 30px;
+  margin-right: 30px;
+
+}
+
+.message {
+  color: var(--steel-blue);
+  font-size: 25px;
 }
 
 /* افکت‌های هاور و فعال */
 .button:hover {
-  background-color: #555;
+  background-color: var(--steel-blue);
 }
 
 .button:active {
-  background-color: #666;
+  background-color: var(--midnight-blue);
 }
 
 /* استایل‌های دکمه‌های عملگر */
