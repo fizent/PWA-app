@@ -1,9 +1,11 @@
 import Btn from "./BtnCalculator"
 import { Fragment } from "react"
+
 export default function OrginallPagte() {
+
     return (
         <Fragment>
-            <div>   
+            <div>
                 <Btn />
             </div>
         </Fragment>

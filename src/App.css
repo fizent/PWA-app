@@ -14,7 +14,6 @@
 }
 
 body {
-
   background-color: var(--blue-dark);
   direction: rtl;
   box-sizing: border-box;
@@ -32,6 +31,10 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.btn-div {
+  display: none;
 }
 
 .calculator-buttons {
@@ -64,10 +67,29 @@ body {
 
 }
 
+.Link {
+  background-color: var(--steel-blue);
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+}
+
 .message {
   color: var(--steel-blue);
   font-size: 25px;
+  text-wrap: wrap;
 }
+
+
+.displayA {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 
 /* افکت‌های هاور و فعال */
 .button:hover {
@@ -107,10 +129,59 @@ body {
   background-color: #e03333;
 }
 
+.div-setting {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  
+}
+
+
+
+.AboutText {
+  text-align: center;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.color-white {
+  color: white;
+}
 
 
 
 @media (max-width: 726px) {
+  .btn-div {
+    display: block;
+    position: fixed;
+    top: 0;
+    margin: 10px;
+  }
+
+  .menu_mobile {
+    background-color: var(--steel-blue);
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+
+  }
+  .div-logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .wid-logo {
+    width: 200px;
+  }
+  .wid-btn {
+    width: 30px;
+  }
   .calculator-buttons {
     width: 100vw;
     display: grid;
@@ -118,6 +189,14 @@ body {
     grid-template-rows: repeat(5, 1fr);
 
   }
+
+  .menu_mobile {
+    display: block;
+    z-index: 400;
+    top: 30px;
+
+  }
+
   .clear {
     grid-column: span 1;
   }
@@ -133,4 +212,57 @@ body {
     grid-column-start: 3;
   }
 
+
+  .sider {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    z-index: 999;
+    background-color: white;
+    width: 50%;
+    background-color: rgba(0, 0, 58, 0.637);
+    border-left: 3px solid white;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+
+
+  }
+  .sider.active {
+    transform: translateX(0);
+  }
+
+  .sider.hidden {
+    transform: translateX(100%);
+  }
+  .text-dashbord {
+    margin-top:100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .color-text-dashbord {
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 25px;
+
+  }
+
+
+  a {
+    text-decoration: none;
+    color: white;
+
+  }
+
+
+
+  #myket {
+    width: 200px;
+  }
+  
+
+
+
+  
 }

@@ -1,7 +1,7 @@
 {
   "id": "/",
-  "name": "Fazel App",
-  "short_name": "Fazel Calculator",
+  "name": "Funny Calculator",
+  "short_name": "Calculator",
   "description": "A Progressive Web App built with React and Vite",
   "start_url": "/",
   "display": "standalone",
