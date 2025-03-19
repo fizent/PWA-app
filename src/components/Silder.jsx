@@ -12,7 +12,7 @@ export default function MenuMobile() {
         <div className={`sider ${isVisible ? "active" : "hidden"}`}>  
             <div className="btn-div">
                 <button className="menu_mobile" onClick={closeMenu}>
-                    <img className="wid-btn" src="/public/icons8-close.svg" alt="Close menu" />
+                    <img className="wid-btn" src="/icons8-close.svg" alt="Close menu" />
                 </button>
             </div>
             <div className="text-dashbord">
@@ -27,7 +27,7 @@ export default function MenuMobile() {
                     </li>
                     <li className="color-text-dashbord">
                     <a href="https://myket.ir/app/app.vercel.calculator_app_xwy5.twa">
-                        <img src="/public/myket.png" alt="Myket" id="myket" />
+                        <img src="/myket.png" alt="Myket" id="myket" />
                     </a>
                     </li>
                 </ul>
