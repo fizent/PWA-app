@@ -593,11 +593,7 @@ export default function Btn() {
   return (
     <div className="calculator">
       <div className="btn-div">
-        <button
-          className="menu_mobile"
-          onClick={() => setOpen(!isOpen)}
-          onTouchStart={() => setOpen(!isOpen)} // Support for touch event
-        >
+        <button className="menu_mobile" onClick={() => setOpen(!isOpen)}>
           <img className="wid-btn" src="/icons8-menü.svg" alt="menu" />
         </button>
       </div>
@@ -607,115 +603,27 @@ export default function Btn() {
         <div className="message">{message}</div>
       </div>
       <div className="calculator-buttons">
-        <button
-          className="button clear"
-          onClick={handleClear}
-          onTouchStart={handleClear} // Support for touch event
-        >
-          AC
-        </button>
-        <button
-          className="button operator"
-          onClick={() => handleButtonClick('%')}
-          onTouchStart={() => handleButtonClick('%')}
-        >
-          %
-        </button>
-        <button
-          className="button operator"
-          onClick={() => handleButtonClick('√')}
-          onTouchStart={() => handleButtonClick('√')}
-        >
-          √
-        </button>
-        <button
-          className="button operator"
-          onClick={() => handleButtonClick('/')}
-          onTouchStart={() => handleButtonClick('/')}
-        >
-          /
-        </button>
-
-        {[7, 8, 9].map(num => (
-          <button
-            key={num}
-            className="button"
-            onClick={() => handleButtonClick(num.toString())}
-            onTouchStart={() => handleButtonClick(num.toString())} // Support for touch event
-          >
-            {num}
-          </button>
-        ))}
-        <button
-          className="button operator"
-          onClick={() => handleButtonClick('*')}
-          onTouchStart={() => handleButtonClick('*')}
-        >
-          ×
-        </button>
-
-        {[4, 5, 6].map(num => (
-          <button
-            key={num}
-            className="button"
-            onClick={() => handleButtonClick(num.toString())}
-            onTouchStart={() => handleButtonClick(num.toString())} // Support for touch event
-          >
-            {num}
-          </button>
-        ))}
-        <button
-          className="button operator"
-          onClick={() => handleButtonClick('-')}
-          onTouchStart={() => handleButtonClick('-')}
-        >
-          −
-        </button>
-
-        {[1, 2, 3].map(num => (
-          <button
-            key={num}
-            className="button"
-            onClick={() => handleButtonClick(num.toString())}
-            onTouchStart={() => handleButtonClick(num.toString())} // Support for touch event
-          >
-            {num}
-          </button>
-        ))}
-        <button
-          className="button operator"
-          onClick={() => handleButtonClick('+')}
-          onTouchStart={() => handleButtonClick('+')}
-        >
-          +
-        </button>
-
-        <button
-          className="button"
-          onClick={() => handleButtonClick('0')}
-          onTouchStart={() => handleButtonClick('0')}
-        >
-          0
-        </button>
-        <button
-          className="button"
-          onClick={() => handleButtonClick('.')}
-          onTouchStart={() => handleButtonClick('.')}
-        >
-          .
-        </button>
-        <button
-          className="button equals"
-          onClick={handleEvaluate}
-          onTouchStart={handleEvaluate}
-        >
-          =
-        </button>
+        <button className="button clear" onClick={handleClear}>AC</button>
+        <button className="button operator" onClick={() => handleButtonClick('%')}>%</button>
+        <button className="button operator" onClick={() => handleButtonClick('√')}>√</button>
+        <button className="button operator" onClick={() => handleButtonClick('/')}>/</button>
+  
+        {[7, 8, 9].map(num => <button key={num} className="button" onClick={() => handleButtonClick(num.toString())}>{num}</button>)}
+        <button className="button operator" onClick={() => handleButtonClick('*')}>×</button>
+  
+        {[4, 5, 6].map(num => <button key={num} className="button" onClick={() => handleButtonClick(num.toString())}>{num}</button>)}
+        <button className="button operator" onClick={() => handleButtonClick('-')}>−</button>
+  
+        {[1, 2, 3].map(num => <button key={num} className="button" onClick={() => handleButtonClick(num.toString())}>{num}</button>)}
+        <button className="button operator" onClick={() => handleButtonClick('+')}>+</button>
+  
+        <button className="button" onClick={() => handleButtonClick('0')}>0</button>
+        <button className="button" onClick={() => handleButtonClick('.')}>.</button>
+        <button className="button equals" onClick={handleEvaluate}>=</button>
       </div>
     </div>
   );
-}
-
+  }
 
 
 
